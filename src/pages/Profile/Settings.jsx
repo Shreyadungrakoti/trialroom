@@ -8,11 +8,11 @@ function Settings() {
 
   const handleLogout = () => {
     logout();
-    navigate('/login');
+    navigate('/');
   };
 
   const handleSwitchMode = () => {
-    navigate('/experience');
+    navigate('/');
   };
 
   return (

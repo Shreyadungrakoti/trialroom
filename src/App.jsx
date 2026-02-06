@@ -2,12 +2,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { UserProvider } from './context/UserContext';
 import { AvatarProvider } from './context/AvatarContext';
 
-// Auth Pages
-import Login from './pages/Auth/Login';
-import Signup from './pages/Auth/Signup';
-
 // Core Pages
-import ExperienceSelection from './pages/ExperienceSelection';
+import Landing from './pages/Landing/Landing';
 import QuickSetup2D from './pages/AvatarSetup/QuickSetup2D';
 import AvatarStudio3DSetup from './pages/AvatarSetup/AvatarStudio3DSetup';
 import Home2D from './pages/Home/Home2D';
@@ -27,12 +23,8 @@ function App() {
       <AvatarProvider>
         <Router>
           <Routes>
-            {/* Auth Routes */}
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            
-            {/* Experience Selection */}
-            <Route path="/experience" element={<ExperienceSelection />} />
+            {/* Landing Page - First Screen */}
+            <Route path="/" element={<Landing />} />
             
             {/* Avatar Setup */}
             <Route path="/setup/quick" element={<QuickSetup2D />} />
@@ -51,9 +43,6 @@ function App() {
             {/* Profile */}
             <Route path="/profile" element={<Profile />} />
             <Route path="/settings" element={<Settings />} />
-            
-            {/* Default Route */}
-            <Route path="/" element={<Navigate to="/login" replace />} />
           </Routes>
         </Router>
       </AvatarProvider>

@@ -1,0 +1,275 @@
+.landing-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+  position: relative;
+}
+
+/* Floating Login Button */
+.floating-login-btn {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  background: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  transition: all 0.3s;
+  font-weight: 600;
+  font-size: 15px;
+  color: #667eea;
+}
+
+.floating-login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+}
+
+.login-icon {
+  font-size: 20px;
+}
+
+.login-text {
+  font-weight: 600;
+}
+
+/* Main Content */
+.landing-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.landing-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.landing-title {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #fff 0%, #f0e6ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.landing-subtitle {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.experience-heading {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 40px;
+}
+
+/* Experience Cards */
+.experience-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.experience-card {
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.experience-card:hover::before {
+  transform: scaleX(1);
+}
+
+.experience-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.experience-card-premium {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.experience-card-premium::before {
+  background: white;
+}
+
+.card-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  backdrop-filter: blur(10px);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-icon {
+  font-size: 64px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.experience-card h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.card-description {
+  font-size: 15px;
+  opacity: 0.8;
+  margin-bottom: 28px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.card-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+}
+
+.card-features li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.card-features li::before {
+  content: '✓';
+  margin-right: 12px;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.experience-card-premium .card-features li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.experience-card-premium .card-features li::before {
+  color: white;
+}
+
+.card-cta {
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 14px;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 12px;
+  transition: all 0.2s;
+}
+
+.experience-card:hover .card-cta {
+  background: rgba(102, 126, 234, 0.2);
+  transform: translateX(4px);
+}
+
+.experience-card-premium .card-cta {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.experience-card-premium:hover .card-cta {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.landing-note {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .floating-login-btn {
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+  }
+
+  .login-text {
+    display: none;
+  }
+
+  .landing-title {
+    font-size: 36px;
+  }
+
+  .landing-subtitle {
+    font-size: 16px;
+  }
+
+  .experience-heading {
+    font-size: 24px;
+  }
+
+  .experience-options {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .experience-card {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-container {
+    padding: 20px 16px;
+  }
+
+  .landing-title {
+    font-size: 28px;
+  }
+
+  .card-icon {
+    font-size: 48px;
+  }
+}
