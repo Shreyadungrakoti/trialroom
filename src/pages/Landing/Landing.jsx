@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useUser } from '../../context/UserContext';
+import { useAvatar } from '../../context/AvatarContext';
 import AuthModal from '../../components/AuthModal';
 import './Landing.css';
 
 function Landing() {
   const navigate = useNavigate();
-  const { isAuthenticated, selectExperience } = useUser();
+  const { isAuthenticated, user, selectExperience } = useUser();
+  const { avatar3D } = useAvatar();
   const [showAuthModal, setShowAuthModal] = useState(false);
+  const [modelRotation, setModelRotation] = useState(0);
 
   const handleExperienceSelect = (mode) => {
     if (!isAuthenticated) {
@@ -67,18 +70,59 @@ function Landing() {
 
       {/* Main Content */}
       <div className="landing-content">
-        <div className="landing-header">
-          <h1 className="landing-title">
-            <span className="gradient-text">Virtual Try-On</span>
-            <br />
-            Fashion Platform
-          </h1>
-          <p className="landing-subtitle">
-            Create your digital avatar and try outfits in 2D or immersive 3D
-          </p>
-        </div>
+        {/* Show Avatar Model when logged in */}
+        {isAuthenticated ? (
+          <div className="avatar-showcase">
+            <div className="showcase-header">
+              <h1 className="showcase-title">Welcome back, {user?.name}!</h1>
+              <p className="showcase-subtitle">Your digital fashion model is ready</p>
+            </div>
 
-        <h2 className="experience-heading">How do you want to try outfits?</h2>
+            <div className="model-viewer">
+              <div 
+                className="model-3d"
+                style={{ 
+                  transform: `rotateY(${modelRotation}deg)`,
+                  transition: 'transform 0.5s ease'
+                }}
+              >
+                <div className="model-figure">🧍</div>
+                <div className="model-shadow"></div>
+              </div>
+              <div className="model-label">Your Model</div>
+              
+              {/* Model Controls */}
+              <div className="model-controls">
+                <button 
+                  className="control-btn"
+                  onClick={() => setModelRotation(modelRotation - 45)}
+                >
+                  ↺
+                </button>
+                <button 
+                  className="control-btn"
+                  onClick={() => setModelRotation(modelRotation + 45)}
+                >
+                  ↻
+                </button>
+              </div>
+            </div>
+
+            <h2 className="experience-heading">Choose your experience</h2>
+          </div>
+        ) : (
+          <div className="landing-header">
+            <h1 className="landing-title">
+              <span className="gradient-text">Virtual Try-On</span>
+              <br />
+              Fashion Platform
+            </h1>
+            <p className="landing-subtitle">
+              Create your digital avatar and try outfits in 2D or immersive 3D
+            </p>
+            <h2 className="experience-heading">How do you want to try outfits?</h2>
+          </div>
+        )}
 
         <div className="experience-options">
           {/* Quick Try-On (2D) */}
