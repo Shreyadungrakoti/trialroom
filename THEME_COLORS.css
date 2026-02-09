@@ -1,0 +1,39 @@
+/* 
+BLACKPINK Theme Color Variables
+Use these colors throughout the app for consistency
+*/
+
+:root {
+  /* Primary Colors */
+  --color-black: #000000;
+  --color-pink: #FF1493;
+  --color-white: #FFFFFF;
+  
+  /* Backgrounds */
+  --bg-primary: #000000;
+  --bg-secondary: #1a1a1a;
+  --bg-card: #1a1a1a;
+  
+  /* Text Colors */
+  --text-primary: #FFFFFF;
+  --text-secondary: #CCCCCC;
+  --text-tertiary: #999999;
+  --text-heading: #FF1493;
+  
+  /* Borders */
+  --border-color: #333333;
+  --border-pink: #FF1493;
+  
+  /* Button Colors */
+  --btn-primary-bg: #FF1493;
+  --btn-primary-text: #FFFFFF;
+  --btn-secondary-bg: #000000;
+  --btn-secondary-border: #333333;
+  
+  /* Shadows */
+  --shadow-pink: 0 4px 20px rgba(255, 20, 147, 0.4);
+  --shadow-pink-hover: 0 6px 30px rgba(255, 20, 147, 0.6);
+  
+  /* Gradients */
+  --gradient-pink: linear-gradient(135deg, #FF1493 0%, #C71585 100%);
+}

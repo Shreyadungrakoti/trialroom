@@ -10,7 +10,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f5f7fa;
+  background: #000000;
+  color: white;
 }
 
 #root {
@@ -79,6 +80,6 @@ button:focus,
 input:focus,
 select:focus,
 textarea:focus {
-  outline: 2px solid #667eea;
+  outline: 2px solid #FF1493;
   outline-offset: 2px;
 }

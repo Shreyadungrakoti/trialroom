@@ -3,17 +3,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #000000;
   padding: 40px 20px;
 }
 
 .setup-card {
-  background: white;
+  background: #1a1a1a;
+  border: 2px solid #FF1493;
   border-radius: 20px;
   padding: 48px;
   max-width: 600px;
   width: 100%;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 60px rgba(255, 20, 147, 0.4);
 }
 
 .setup-card-wide {
@@ -24,11 +25,11 @@
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #1a1a1a;
+  color: #FF1493;
 }
 
 .setup-subtitle {
-  color: #666;
+  color: #cccccc;
   margin-bottom: 32px;
   font-size: 15px;
 }
@@ -47,7 +48,7 @@
 
 .form-section label {
   font-weight: 600;
-  color: #1a1a1a;
+  color: #FF1493;
   font-size: 14px;
 }
 
@@ -61,16 +62,22 @@
 .form-section input[type="file"],
 .form-section select {
   padding: 14px 16px;
-  border: 2px solid #e5e5e5;
+  background: #000000;
+  border: 2px solid #333333;
   border-radius: 10px;
   font-size: 15px;
+  color: white;
   transition: border-color 0.2s;
+}
+
+.form-section input::placeholder {
+  color: #666666;
 }
 
 .form-section input:focus,
 .form-section select:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #FF1493;
 }
 
 .photo-preview {
@@ -82,9 +89,11 @@
 
 .photo-item {
   padding: 12px;
-  background: #f5f5f5;
+  background: #000000;
+  border: 1px solid #333333;
   border-radius: 8px;
   font-size: 14px;
+  color: white;
 }
 
 .photo-upload-grid {
@@ -109,18 +118,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px dashed #ccc;
+  border: 2px dashed #333333;
   border-radius: 12px;
   font-size: 14px;
   font-weight: 600;
-  color: #666;
+  color: #999999;
+  background: #000000;
   transition: all 0.2s;
 }
 
 .upload-placeholder:hover {
-  border-color: #667eea;
-  background: #f8f9ff;
-  color: #667eea;
+  border-color: #FF1493;
+  background: rgba(255, 20, 147, 0.1);
+  color: #FF1493;
 }
 
 .form-row {
@@ -130,7 +140,8 @@
 }
 
 .setup-features {
-  background: #f8f9ff;
+  background: rgba(255, 20, 147, 0.1);
+  border: 1px solid #FF1493;
   padding: 20px;
   border-radius: 12px;
   display: grid;
@@ -140,7 +151,7 @@
 
 .feature-item {
   font-size: 14px;
-  color: #667eea;
+  color: #FF1493;
   font-weight: 500;
 }
 

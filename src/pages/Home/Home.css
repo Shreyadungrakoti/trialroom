@@ -1,6 +1,6 @@
 .home-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: #000000;
   padding: 20px;
 }
 
@@ -17,20 +17,21 @@
 .home-header h1 {
   font-size: 32px;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #FF1493;
 }
 
 .settings-btn {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: white;
+  background: #FF1493;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 20px;
   text-decoration: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  box-shadow: 0 2px 8px rgba(255, 20, 147, 0.4);
   transition: transform 0.2s;
 }
 
@@ -45,11 +46,12 @@
 
 /* Avatar Section */
 .avatar-section {
-  background: white;
+  background: #1a1a1a;
+  border: 2px solid #FF1493;
   border-radius: 20px;
   padding: 40px;
   margin-bottom: 32px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(255, 20, 147, 0.3);
 }
 
 .avatar-preview {
@@ -89,11 +91,12 @@
 
 /* 3D Specific */
 .avatar-section-3d {
-  background: white;
+  background: #1a1a1a;
+  border: 2px solid #FF1493;
   border-radius: 20px;
   padding: 40px;
   margin-bottom: 32px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(255, 20, 147, 0.3);
 }
 
 .avatar-viewer {
@@ -101,7 +104,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #f8f9ff 0%, #e8eaf6 100%);
+  background: rgba(255, 20, 147, 0.1);
+  border: 1px solid #FF1493;
   border-radius: 16px;
   margin-bottom: 24px;
   position: relative;
@@ -120,7 +124,7 @@
 .avatar-label {
   font-size: 16px;
   font-weight: 600;
-  color: #667eea;
+  color: #FF1493;
   margin-top: 20px;
 }
 
@@ -128,7 +132,7 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  background: #667eea;
+  background: #FF1493;
   color: white;
   padding: 6px 16px;
   border-radius: 20px;
@@ -162,16 +166,18 @@
 .button-group button {
   flex: 1;
   padding: 10px;
-  background: #f5f5f5;
-  border: none;
+  background: #000000;
+  border: 2px solid #333333;
   border-radius: 8px;
   font-size: 18px;
+  color: white;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .button-group button:hover {
-  background: #667eea;
+  background: #FF1493;
+  border-color: #FF1493;
   transform: scale(1.05);
 }
 
@@ -181,9 +187,15 @@
 
 .control-group select {
   padding: 10px;
-  border: 2px solid #e5e5e5;
+  background: #000000;
+  border: 2px solid #333333;
   border-radius: 8px;
   font-size: 14px;
+  color: white;
+}
+
+.control-group select:focus {
+  border-color: #FF1493;
 }
 
 /* Action Grid */
@@ -194,19 +206,21 @@
 }
 
 .action-card {
-  background: white;
+  background: #1a1a1a;
+  border: 2px solid #333333;
   border-radius: 16px;
   padding: 32px;
   text-align: center;
   text-decoration: none;
-  color: inherit;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   transition: all 0.3s;
 }
 
 .action-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border-color: #FF1493;
+  box-shadow: 0 8px 30px rgba(255, 20, 147, 0.4);
 }
 
 .action-icon {
@@ -218,12 +232,12 @@
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 8px;
-  color: #1a1a1a;
+  color: #FF1493;
 }
 
 .action-card p {
   font-size: 14px;
-  color: #666;
+  color: #cccccc;
   margin: 0;
 }
 
